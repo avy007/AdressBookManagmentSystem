@@ -9,13 +9,18 @@ public class AdressBookSystem {
     public static void main(String[] args) {
         System.out.println("---   Welcome to Address Book   ---");
       
-        //Scanner sc =new Scanner(System.in);
-        //int input =sc.nextInt();
+        Scanner sc =new Scanner(System.in);
+//      int input =sc.nextInt();
+      int exit=1;
 
-        add();
-        edit();
-        delete();
-    
+
+      do {
+          add();
+          edit();
+          delete();
+          System.out.println("To add new Contact press 1-9  To Exit press ' 0 ' ");
+          exit =sc.nextInt();
+      }while (exit!=0);
 
 
     }
