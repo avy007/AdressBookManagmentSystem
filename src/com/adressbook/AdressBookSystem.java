@@ -14,6 +14,7 @@ public class AdressBookSystem {
 
         add();
         edit();
+        delete();
     
 
 
@@ -79,6 +80,20 @@ public class AdressBookSystem {
             }
         }
 //        Contact contact =Contact.getName();
+    }
+    public static void delete(){
+        System.out.println("Enter Name to delete that address book :");
+        Scanner sc = new Scanner(System.in);
+        String deleteNameContact=sc.nextLine();
+//        Contact contact;
+        for(Contact contact : cotacts_array){
+            if (deleteNameContact.equals(contact.getName())){
+                cotacts_array.remove(contact);
+                System.out.println("Contact Deleted ....");
+            }else {
+            	System.out.println("plz enter valid name");
+            }
+        }
     }
 }
 
